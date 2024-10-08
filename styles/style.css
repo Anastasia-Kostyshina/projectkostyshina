@@ -1,0 +1,25 @@
+h1 {
+    color: red;
+}
+
+.header--white {
+    color: #ffffff;
+    background-color: #1F1E1E;
+}
+
+.button {
+    cursor: pointer;
+    background-color: #BC3324;
+    color: #ffffff;
+}
+
+.button--transparent {
+    background-color: transparent;
+    color: #1F1E1E;
+}
+
+.aside__paragraph {
+    font-size: 128px;
+    color: #1F1E1E;
+    font-weight: 600;
+}
