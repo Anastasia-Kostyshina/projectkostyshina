@@ -1,0 +1,17 @@
+<section class="@@class banner">
+    <h1 class="banner__header">арт — пространство</h1>
+    <div class="banner__img-container">
+        <svg class="banner__img" width="1920" height="325">
+            <use xlink:href="assets/icons/symbols.svg#lenni"></use>
+        </svg>
+    </div>
+    <p class="banner__header">для людей, горящих сердцем и делом <br>место для настоящего</p>
+
+    <div class="banner__offers-container">
+        @@loop('offers.html', [
+          {
+            "class": "banner__offers"
+          }
+        ])
+    </div>
+</section>

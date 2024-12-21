@@ -1,0 +1,216 @@
+.page-footer {
+    flex: 0 0 auto;
+
+    &__container {
+        .container();
+
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        padding-bottom: 74px;
+
+        @media @bw1340 {
+            padding-bottom: 60px;
+        }
+
+        @media @bw768 {
+            padding-bottom: 50px;
+        }
+    }
+
+    &__decor {
+        display: flex;
+        justify-content: center;
+        gap: 98px;
+
+        @media @bw1660 {
+            gap: 92px;
+        }
+
+        @media @bw1340 {
+            gap: 52px;
+        }
+
+        @media @bw768 {
+            gap: 20px;
+        }
+    }
+
+    &__stripe-left,
+    &__stripe-right {
+        width: 38%;
+        height: 2px;
+    }
+
+    &__stripe-left {
+        background: linear-gradient(270.00deg, rgb(28, 27, 27),rgba(255, 255, 255, 0) 82.857%);
+    }
+
+    &__stripe-right {
+        background: linear-gradient(135.00deg, rgb(28, 27, 27) 0%,rgba(255, 255, 255, 0) 100%);
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        gap: 60px 40px;
+
+        @media @bw650 {
+            flex-direction: column;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        padding-left: 22px;
+        border-left: 4px solid @red;
+
+        @media @bw768 {
+            gap: 27px;
+        }
+    }
+
+    &__nav-link {
+        font-weight: 600;
+        text-decoration: none;
+        transition: color .2s;
+
+        @media @bw768 {
+            font-size: 14px;
+            line-height: 19px;
+        }
+
+        &:hover {
+            color: @red_dark;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 60px;
+
+        @media @bw1340 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "socials socials"
+                "privacy author";
+        }
+
+        @media @bw768 {
+            gap: 0px;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "socials"
+                "privacy"
+                "author";
+        }
+    }
+
+    &__privacy {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 384px;
+        grid-area: privacy;
+
+        @media @bw1340 {
+            width: auto;
+            gap: 14px;
+        }
+
+        @media @bw768 {
+            flex-direction: column-reverse;
+            gap: 16px;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__documents {
+        display: flex;
+        align-items: flex-end;
+        gap: 60px;
+
+        @media @bw1340 {
+            gap: 15px;
+        }
+
+        @media @bw768 {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+        }
+    }
+
+    &__documents-link {
+        font-weight: 600;
+        text-decoration: none;
+
+        @media @bw1340 {
+            font-size: 14px;
+            line-height: 19px;
+        }
+    }
+
+    &__copyright {
+        @media @bw1340 {
+            font-size: 14px;
+            line-height: 19px;
+        }
+
+        @media @bw768 {
+            align-self: flex-end;
+        }
+    }
+
+    &__socials {
+        grid-area: socials;
+
+        @media @bw1340 {
+            justify-content: center;
+        }
+
+        @media @bw768 {
+            margin-bottom: 60px;
+        }
+    }
+
+    &__author {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        gap: 15px;
+        width: 384px;
+        font-weight: 600;
+        grid-area: author;
+
+        @media @bw1340 {
+            width: auto;
+            font-size: 14px;
+            line-height: 19px;
+        }
+
+        @media @bw768 {
+            align-items: flex-start;
+        }
+    }
+
+    &__author-link {
+        font-size: 0;
+        line-height: 0;
+    }
+
+    &__author-icon {
+        width: 56px;
+        height: 17px;
+
+        @media @bw768 {
+            width: 58px;
+            height: 22px;
+        }
+    }
+}

@@ -34,7 +34,7 @@ const resources = {
   static: [
     "src/assets/icons/**/*.*",
     "src/assets/favicons/**/*.*",
-    "src/assets/fonts/**/*.{woff,woff2}",
+    "src/assets/fonts/**/*.{woff,woff2,eot,otf}",
     "src/assets/video/**/*.{mp4,webm}",
     "src/assets/audio/**/*.{mp3,ogg,wav,aac}",
     "src/json/**/*.json",

@@ -4,6 +4,10 @@
     max-width: 100%;
     min-width: 280px;
 
+    @media @bw600 {
+        min-width: unset;
+    }
+
     &__link {
         display: flex;
         flex-direction: column;
@@ -12,8 +16,8 @@
         text-decoration: none;
 
         &:hover .event-card__title {
-            color: #BC3324;
-            text-decoration-color: #BC3324;
+            color: @red_dark;
+            text-decoration-color: @red_dark;
         }
     }
 
@@ -25,6 +29,18 @@
         font-size: 0;
         text-decoration: none;
         overflow: hidden;
+
+        @media @bw1660 {
+            margin: 0 0 20px;
+        }
+
+        @media @bw1340 {
+            margin: 0 0 15px;
+        }
+
+        @media @bw768 {
+            margin: 0 0 25px;
+        }
 
         &::after {
             content: "";
@@ -55,10 +71,11 @@
         transition: color 0.2s, text-decoration-color 0.2s;
 
         @media @bw1660 {
-            margin: 0 0 10px;
+            margin: 0 0 8px;
         }
 
         @media @bw1340 {
+            margin: 0 0 10px;
             min-height: 54px;
             font-size: 20px;
             line-height: 27px;
@@ -87,5 +104,13 @@
         font-weight: 300;
         font-size: 14px;
         line-height: 19px;
+
+        @media @bw1660 {
+            margin: 8px 0 0;
+        }
+
+        @media @bw1340 {
+            margin: 10px 0 0;
+        }
     }
 }

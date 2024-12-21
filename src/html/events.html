@@ -7,8 +7,17 @@
     @@include('blocks/page-header.html')
 
     <main class="main">
+        <div class="breadcrumbs">
+          <!-- prettier-ignore -->
+          @@loop('blocks/breadcrumbs.html', [
+            {
+              "link": "index.html",
+              "name": "Главная"
+            }
+          ])
+          <div class="breadcrumbs__link breadcrumbs__link-current">Мероприятия</div>
+        </div>
 
-        <!-- Здесь будут хлебные крошки -->
         <div class="events">
             <section class="listing events__listing">
                 <h2 class="listing__title section-title">Мероприятия</h2>
@@ -92,21 +101,30 @@
                   ])
                 </div>
 
-                <!-- Кнопка "Показать все" -->
+                 <div class="listing__more-btn more-btn">
+                  <a href="#" class="more-btn__link">
+                    <p class="more-btn__text">Показать еще</p>
+                    <div class="more-btn__arrow-container">
+                      <div class="more-btn__arrow arrow">
+                        <svg class="arrow__icon arrow__icon--vertical" width="91" height="60">
+                          <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </a>
+                 </div>
             </section>
 
             <!-- Здесь будут дополнительные услуги -->
-            <section class="tariffs events__tariffs">
-              <h2 class="tariffs__title section-title">Дополнительные  услуги</h2>
-              <div class="tariffs__content content">
-                <p>
-                  Перед запуском проекта, мы подготавливаем подробную смету и согласуем ее с клиентом. Убедившись, что все пожеланию учтены 
-                  и мы можем приступать к реализациии проекта, начинается сложная, но интересная работа, результатом которой будет проведение 
-                  вашего мероприятия на высшем уровне.
-                </p>
-              </div>
+            <section class="events__services">
+              <h2 class="events__section-title section-title section-title--s">Дополнительные  услуги</h2>
+              <p class="events__section-description">
+                Перед запуском проекта, мы подготавливаем подробную смету и согласуем ее с клиентом. Убедившись, что все пожеланию учтены 
+                и мы можем приступать к реализациии проекта, начинается сложная, но интересная работа, результатом которой будет проведение 
+                вашего мероприятия на высшем уровне.
+              </p>
               
-              <table class="events__tariffs-table  table">
+              <table class="events__tariffs-table table">
                 <thead class="table__head">
                   <tr class="table__head-tr">
                     <th class="table__th"></th>
@@ -208,6 +226,60 @@
                  </tr>
                 </tfoot>
               </table>
+
+              <!-- prettier-ignore -->
+              @@loop('blocks/offers.html', [
+              {
+                "class": "events__offers"
+              }
+              ])
+
+              <div class="events__info info">
+                <div class="info__item">
+                  <!-- prettier-ignore -->
+                  @@loop('blocks/square-icon.html', [
+                  {
+                    "class": "events__square-icon",
+                    "svg-icon": "information"
+                  }
+                  ])
+                  <div class="info__content">
+                    <p class="info__title">Цены</p>
+                    <p class="info__paragraph">Цены, указанные на сайте носят информационный характер. Мы придерживаемся индивидуального подхода в работе с клиентом.</p>
+                  </div>
+                </div>
+
+                <div class="info__item">
+                  <!-- prettier-ignore -->
+                  @@loop('blocks/square-icon.html', [
+                  {
+                    "class": "events__square-icon",
+                    "svg-icon": "contact"
+                  }
+                  ])
+                  <div class="info__content">
+                    <p class="info__title">Контакты</p>
+                    <p class="info__paragraph">Отдел организации мероприятий</p>
+                    <a href="tel:+7 499 350 0730" class="info__paragraph">+7 499 350 0730</a>
+                    <a href="mailto:hi@tagree.ru" class="info__paragraph">hi@tagree.ru</a>
+                  </div>
+                </div>
+
+                <div class="info__item">
+                  <!-- prettier-ignore -->
+                  @@loop('blocks/square-icon.html', [
+                  {
+                    "class": "events__square-icon",
+                    "svg-icon": "handshake"
+                  }
+                  ])
+                  <div class="info__content">
+                    <p class="info__title">Преимущество</p>
+                    <p class="info__paragraph">Мы имеем все возможности для того, чтобы помочь как малому бизнесу и молодым талантам, так и большим корпорациям и холдингам.</p>
+                  </div>
+                </div>
+              </div>
+
             </section>
         </div>
         
