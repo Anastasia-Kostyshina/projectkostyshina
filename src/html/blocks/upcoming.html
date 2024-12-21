@@ -1,0 +1,70 @@
+<section class="@@class upcoming">
+    <div class="upcoming__container">
+        <h2 class="upcoming__title section-title">Мероприятия</h2>    
+    </div>
+    <div class="upcoming__slider-container">
+        <div class="upcoming__slider">
+            <!-- prettier-ignore -->
+            @@loop('event-card.html', [
+            {
+              "class": "upcoming__event-card",
+              "img": "assets/images/events/nirvana.jpg",
+              "img_mob": "assets/images/events/nirvana_mob.jpg",
+              "img_webp": "assets/images/events/nirvana.webp",
+              "img_mob_webp": "assets/images/events/nirvana_mob.webp",
+              "alt": "nirvana",
+              "title": "Собираемся и слушаем альбом Nirvana. Nirvana",
+              "descr": "Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.",
+              "time": "07.12.2022 | начало 18.00",
+              "datetime": "2022-12-07T18:00"
+            },
+            {
+              "class": "upcoming__event-card",
+              "img": "assets/images/events/stuff.jpg",
+              "img_mob": "assets/images/events/stuff_mob.jpg",
+              "img_webp": "assets/images/events/stuff.webp",
+              "img_mob_webp": "assets/images/events/stuff_mob.webp",
+              "alt": "stuff",
+              "title": "Есть тема, нужно обсудить с HowStuffWorks",
+              "descr": "Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.",
+              "time": "14.12.2022 | начало 18.30",
+              "datetime": "2022-12-14T18:30"
+            },
+            {
+              "class": "upcoming__event-card",
+              "img": "assets/images/events/sade.jpg",
+              "img_mob": "assets/images/events/sade_mob.jpg",
+              "img_webp": "assets/images/events/sade.webp",
+              "img_mob_webp": "assets/images/events/sade_mob.webp",
+              "alt": "sade",
+              "title": "Вечер | The Best of Sade",
+              "descr": "Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.",
+              "time": "16.12.2022 | начало 20.00",
+              "datetime": "2022-12-16T20:00"
+            }
+            ])
+        </div>
+    </div>
+    <div class="upcoming__container">
+      <div class="upcoming__slider-nav slider-nav">
+        <button type="button" class="slider-nav__arrow-prev arrow">
+          <svg class="arrow__icon arrow__icon--left" width="91" height="60">
+            <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+          </svg>
+        </button>
+        <div class="slider-nav__pagination">
+          <div class="slider-nav__line"></div>
+          <div class="slider-nav__line"></div>
+          <div class="slider-nav__line slider-nav__line--active"></div>
+          <div class="slider-nav__line"></div>
+          <div class="slider-nav__line"></div>
+        </div>
+        <button type="button" class="slider-nav__arrow-next arrow">
+          <svg class="arrow__icon" width="91" height="60">
+            <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+          </svg>
+        </button>
+      </div>
+      <a href="events.html" class="upcoming__link link">Смотреть все</a>
+    </div>
+</section>
