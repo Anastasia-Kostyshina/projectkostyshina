@@ -40,6 +40,10 @@
         display: flex;
         align-items: center;
         z-index: 1;
+
+        @media @bw768 {
+            padding-left: 0;
+        }
     }
 
     &__logo {
@@ -138,7 +142,7 @@
         transition: color 0.2s;
 
         &:hover {
-            color: #bc3324;
+            color: @red_dark;
         }
     }
 
@@ -146,6 +150,11 @@
         width: 24px;
         height: 24px;
         font-size: 0;
+        transition: color 0.2s;
+
+        &:hover {
+            color: @red_dark;
+        }
     }
 
     &__right-block {
@@ -201,6 +210,7 @@
 
             @media @bw1020 {
                 background-color: transparent;
+                color: @red_dark;
             }
         }
     }
