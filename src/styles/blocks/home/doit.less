@@ -1,0 +1,71 @@
+.doit {
+    display: flex;
+    flex-direction: column;
+    font-size: 128px;
+    line-height: 154px;
+    overflow: hidden;
+    &__top,
+    &__bottom {
+        margin: 0;
+        font-family: @font3;
+        font-size: 128px;
+        font-size: 6.66vw;
+        line-height: 154px;
+        line-height: 121%;
+        font-weight: 700;
+        white-space: nowrap;
+
+        @media @bw1170 {
+            font-size: 6.89vw;
+        }
+
+        @media @bw600 {
+            font-size: 40px;
+        }
+
+        @media @bw320 {
+            font-size: 12.7vw;
+        }
+    }
+
+    &__top {
+        margin-left: -52px;
+        margin-left: -2.68vw;
+
+        @media @bw1170 {
+            display: flex;
+            flex-direction: column;
+            margin-right: -7.9vw;
+        }
+
+        @media @bw600 {
+            margin-right: -69px;
+        }
+
+        @media @bw320 {
+            margin-right: -21.3vw;
+        }
+    }
+
+    &__right {
+        @media @bw1170 {
+            align-self: flex-end;
+        }
+    }
+
+    &__bottom {
+        margin-left: auto;
+        margin-right: -9.8vw;
+        text-align: right;
+
+        @media @bw600 {
+            margin-right: -60px;
+            margin-left: -57px;
+            text-align: right;
+        }
+
+        @media @bw320 {
+            margin-left: -18vw;
+        }
+    }
+}

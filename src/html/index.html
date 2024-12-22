@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('blocks/head.html')
+
+  <body class="body">
+    
+    @@include('blocks/page-header.html')
+
+    <main class="main">
+
+        <div class="home">
+            @@include('blocks/banner.html', {"class": "home__banner"})
+
+            @@include('blocks/about.html', {"class": "home__about"})
+
+            @@include('blocks/upcoming.html', {"class": "home__upcoming"})
+
+            @@include('blocks/blog-listing.html', {"class": "home__listing"})
+
+            @@include('blocks/contacts.html', {"class": "home__contacts"})
+
+            @@include('blocks/doit.html', {"class": "home__doit"})
+        </div>
+    </main>
+
+    @@include('blocks/page-footer.html')
+
+    @@include('blocks/event-pp.html')
+
+  </body>
+</html>
