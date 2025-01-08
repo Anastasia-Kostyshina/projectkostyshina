@@ -42,7 +42,7 @@ const resources = {
   ]
 };
 
-// Gulp Tasks:
+// Gulp Tasks: 
 
 function clean() {
   return del("dist");
