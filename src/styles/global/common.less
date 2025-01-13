@@ -84,3 +84,18 @@ textarea:focus {
     color: transparent
   }
 }
+
+& [href] {
+  text-decoration: none;
+  transform: color 0.2s;
+
+  &:active {
+    color: @red_dark;
+  }
+
+  &:hover {
+    @media (hover: hover) {
+      color: @red_dark;
+    }
+  }
+}
