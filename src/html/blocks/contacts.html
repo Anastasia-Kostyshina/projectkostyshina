@@ -53,17 +53,8 @@
                 </div>
             </div>
         </div>
-        <div class="contacts__map">
-            <picture class="contacts__picture">
-                <source
-                  media="(max-width: 767px)"
-                  type="image/webp"
-                  srcset="assets/images/map/map_mob.webp"
-                />
-                <source media="(max-width: 767px)" srcset="assets/images/map/map_mob.jpg" />
-                <source type="image/webp" srcset="assets/images/map/map.webp" />
-                <img src="assets/images/map/map.jpg" alt="map" class="contacts__img" />
-            </picture>
+        <div class="contacts__map-container">
+            <div class="contacts__map" id="js-contactsMap"></div>
         </div>
     </div>
 </section>
