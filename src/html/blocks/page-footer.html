@@ -13,10 +13,10 @@
                 <a href="#" class="page-footer__nav-link">Контакты</a>
             </div>
 
-            <form class="page-footer__subscribe-form subscribe-form">
+            <form action="https://jsonplaceholder.typicode.com/posts" id="js-subscribeForm" class="page-footer__subscribe-form subscribe-form">
                 <p class="subscribe-form__paragraph">Подпишись и будь в курсе происходящего</p>
                 <div class="subscribe-form__middle">
-                    <input class="subscribe-form__input" type="text" placeholder="Email" name="email" required>
+                    <input id="js-subscribeEmail" class="subscribe-form__input" type="email" placeholder="Email" name="email" required>
                     <button type="submit" class="btn subscribe-form__submit">Подписаться</button>
                 </div>
                 <label class="subscribe-form__check check">
