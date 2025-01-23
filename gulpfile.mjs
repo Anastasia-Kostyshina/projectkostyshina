@@ -31,9 +31,9 @@ const resources = {
   images: "src/assets/images/**/*.{png,jpg,jpeg,webp,gif,svg}",
   less: "src/styles/**/*.less",
   svgSprite: "src/assets/svg-sprite/*.svg",
+  favicons: "src/assets/favicons/**/*.*",
   static: [
     "src/assets/icons/**/*.*",
-    "src/assets/favicons/**/*.*",
     "src/assets/fonts/**/*.{woff,woff2,eot,otf}",
     "src/assets/video/**/*.{mp4,webm}",
     "src/assets/audio/**/*.{mp3,ogg,wav,aac}",
@@ -116,6 +116,12 @@ function copy() {
     .pipe(gulp.dest("dist/"));
 }
 
+function favicons() {
+  return gulp
+    .src(resources.favicons, { encoding: false })
+    .pipe(gulp.dest("dist/assets/favicons"));
+}
+
 function images() {
   return gulp
     .src(resources.images, { encoding: false })
@@ -155,6 +161,7 @@ const build = gulp.series(
   style,
   js,
   jsCopy,
+  favicons,
   images,
   svgSprite
 );
@@ -174,6 +181,7 @@ function serve() {
   gulp.watch(resources.jsVendor, gulp.series(jsCopy, reloadServer));
   gulp.watch(resources.static, { delay: 500 }, gulp.series(copy, reloadServer));
   gulp.watch(resources.images, { delay: 500 }, gulp.series(images, reloadServer));
+  gulp.watch(resources.favicons, { delay: 500 }, gulp.series(favicons, reloadServer));
   gulp.watch(resources.svgSprite, gulp.series(svgSprite, reloadServer));
 }
 
@@ -186,6 +194,7 @@ export {
   style,
   js,
   jsCopy,
+  favicons,
   images,
   svgSprite,
   build,
