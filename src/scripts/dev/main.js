@@ -369,15 +369,17 @@
             success: function () {
               subscribeEmail.val("");
               subscribeEmail.blur();
-              alert("Вы успешно подписались на рассылку новостей");
+              toastr.success("Вы успешно подписались на рассылку новостей");
             },
             error: function () {
-              alert("Что-то пошло не так, попробуйте еще раз");
+              toastr.error("Что-то пошло не так, попробуйте еще раз");
             }
           });
         }
       });
     }
+
+    
 
 
 })();
