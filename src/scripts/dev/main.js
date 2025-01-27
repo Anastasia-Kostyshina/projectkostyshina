@@ -379,6 +379,55 @@
       });
     }
 
+
+    // Выбор столиков
+    const reserveForm = $("#js-reserveForm :checkbox");
+    const sceneTable = $(".scene__table");
+
+    // Для чекбоксов
+    reserveForm.click(function () {
+      const tableName = $(this).attr("name");
+      sceneTable
+        .filter(function (){ return $(this).attr("data-table") == tableName; })
+        .toggleClass("table--active");
+      calculateTicket();
+    })
+
+    // Для столов
+    sceneTable.click(function(){
+      $(this).toggleClass("table--active");
+      const tableName = $(this).attr("data-table");
+      const checkbox = reserveForm.filter(function(){return $(this).attr("name") == tableName; });
+      checkbox.prop("checked", !checkbox.prop("checked")); 
+      calculateTicket(); 
+    })
+
+    // Калькулятор
+    function calculateTicket() {
+      let redCount = 0;
+      let blackCount = 0;
+
+      reserveForm.each(function() {
+        if ($(this).is(":checked")) {
+          if($(this).parent().hasClass("check--red")) {
+            redCount++;
+          } else {
+            blackCount++;
+          }
+        }
+      })
+
+      $("#js-redCount").text(redCount);
+      const redPrice = $("#js-redCount").attr("data-price") * redCount;
+      $("#js-redPrice").text(redPrice);
+
+      $("#js-blackCount").text(blackCount);
+      const blackPrice = $("#js-blackCount").attr("data-price") * blackCount;
+      $("#js-blackPrice").text(blackPrice);
+
+      $("#js-totalPrice").text(redPrice + blackPrice);
+    }
+
     
 
 
