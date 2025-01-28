@@ -1,0 +1,29 @@
+.scene {
+
+    &__table--active {
+        .scene__table-group {
+            fill: @black;
+        }
+
+        .scene__table-num {
+            fill: @white;
+        }
+    }
+
+    &__table--active.scene__table--red {
+        .scene__table-group {
+            fill: @red;
+        }
+    }
+
+    &__table--disabled {
+        .scene__table-group {
+            fill: #BFBFBF;
+            stroke: #BFBFBF;
+        }
+        
+        .scene__table-num {
+            fill: @black;
+        }
+    }
+}

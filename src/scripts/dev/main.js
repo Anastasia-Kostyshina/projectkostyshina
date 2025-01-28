@@ -379,30 +379,29 @@
       });
     }
 
-
-    // Выбор столиков
+    // Table reservation form
     const reserveForm = $("#js-reserveForm :checkbox");
     const sceneTable = $(".scene__table");
 
-    // Для чекбоксов
+    // Handling the click event on checkboxes
     reserveForm.click(function () {
       const tableName = $(this).attr("name");
       sceneTable
         .filter(function (){ return $(this).attr("data-table") == tableName; })
-        .toggleClass("table--active");
-      calculateTicket();
+        .toggleClass("scene__table--active");
+      calculateTicket(); // Calculator
     })
 
-    // Для столов
+    // Handling the click event on table (svg-map)
     sceneTable.click(function(){
-      $(this).toggleClass("table--active");
+      $(this).toggleClass("scene__table--active");
       const tableName = $(this).attr("data-table");
       const checkbox = reserveForm.filter(function(){return $(this).attr("name") == tableName; });
       checkbox.prop("checked", !checkbox.prop("checked")); 
-      calculateTicket(); 
+      calculateTicket(); // Calculator
     })
 
-    // Калькулятор
+    // Making a calculator
     function calculateTicket() {
       let redCount = 0;
       let blackCount = 0;
@@ -427,8 +426,5 @@
 
       $("#js-totalPrice").text(redPrice + blackPrice);
     }
-
-    
-
 
 })();
