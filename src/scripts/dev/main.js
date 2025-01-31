@@ -390,6 +390,7 @@
         .filter(function (){ return $(this).attr("data-table") == tableName; })
         .toggleClass("scene__table--active");
       calculateTicket(); // Calculator
+      switchReserveSubmit(); // Switch the button state
     })
 
     // Handling the click event on table (svg-map)
@@ -399,6 +400,7 @@
       const checkbox = reserveForm.filter(function(){return $(this).attr("name") == tableName; });
       checkbox.prop("checked", !checkbox.prop("checked")); 
       calculateTicket(); // Calculator
+      switchReserveSubmit(); // Switch the button state
     })
 
     // Making a calculator
@@ -425,6 +427,11 @@
       $("#js-blackPrice").text(blackPrice);
 
       $("#js-totalPrice").text(redPrice + blackPrice);
+    }
+
+    // Switch the state of the submit button when selecting a table
+    function switchReserveSubmit () {
+      $(".js-reserve__submit").prop("disabled", !reserveForm.is(":checked"));
     }
 
 })();

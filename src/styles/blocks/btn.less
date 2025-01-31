@@ -16,6 +16,11 @@
     overflow: hidden;
     cursor: pointer;
 
+    &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
     &:hover {
         background-color: #1F1E1E;
         color: #ffffff;
